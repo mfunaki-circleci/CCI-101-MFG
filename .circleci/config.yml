@@ -18,9 +18,15 @@ jobs:
           paths:
             - ~/.m2/repository
           key: circleci-java-maven-{{ checksum "/tmp/maven_cache_seed" }}
+      - run:
+          command: |
+            mkdir -p ~/test-results/junit/
+            find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/test-results/junit/ \;
+          when: always
       - store_test_results:
-          path: ~/project/my-app/target/surefire-reports
+          path: ~/test-results
       - store_artifacts:
+          path: ~/test-results/junit
           path: ~/project/my-app/target/my-app-1.0-SNAPSHOT.jar
 
 workflows:
