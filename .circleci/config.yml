@@ -22,8 +22,10 @@ jobs:
           command: |
             mkdir -p ~/artifacts/junit/
             mkdir -p ~/artifacts/jar/
+            mkdir -p ~/artifacts/reports/
             find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/artifacts/junit/ \;
             cp ~/project/my-app/target/my-app-1.0-SNAPSHOT.jar ~/artifacts/jar/
+            cp ~/project/my-app/target/my-reports ~/artifacts/reports/
           when: always
       - store_test_results:
           path: ~/artifacts/junit/
