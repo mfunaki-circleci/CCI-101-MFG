@@ -12,7 +12,7 @@ jobs:
       - restore_cache:
           key: circleci-java-maven-{{ checksum "/tmp/maven_cache_seed" }}
       - run:
-          command: mvn package
+          command: mvn jacoco:prepare-agent test jacoco:report
           working_directory: ~/project/my-app
       - save_cache:
           paths:
@@ -25,7 +25,7 @@ jobs:
             mkdir -p ~/artifacts/reports/
             find . -type f -regex ".*/target/surefire-reports/.*xml" -exec cp {} ~/artifacts/junit/ \;
             cp ~/project/my-app/target/my-app-1.0-SNAPSHOT.jar ~/artifacts/jar/
-            cp ~/project/my-app/target/my-reports ~/artifacts/reports/
+            cp ~/project/my-app/target/jacoco.exec ~/artifacts/reports/
           when: always
       - store_test_results:
           path: ~/artifacts/junit/

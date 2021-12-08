@@ -25,6 +25,12 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>org.jacoco</groupId>
+      <artifactId>jacoco-maven-plugin</artifactId>
+      <version>0.8.7</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -72,7 +78,7 @@
         <plugin>
           <groupId>org.jacoco</groupId>
           <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.3</version>
+          <version>0.8.7</version>
           <executions>
             <execution>
               <id>prepare-agent</id>
