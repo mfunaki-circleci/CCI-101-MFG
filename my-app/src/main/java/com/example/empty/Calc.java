@@ -7,7 +7,11 @@ public class Calc {
     }
 
     public int div(int a, int b) {
-        int c = a / b;
-        return c;
+        if (b == 0){
+            return 0;
+        } else {
+            int c = a / b;
+            return c;    
+        }
     }
 }
