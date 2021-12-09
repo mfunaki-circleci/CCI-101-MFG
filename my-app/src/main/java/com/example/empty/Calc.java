@@ -1,5 +1,8 @@
 package com.example.empty;
 
+/**
+ * 計算用クラス
+ */
 public class Calc {
     public int plus(int a, int b) {
         int c = a + b;
