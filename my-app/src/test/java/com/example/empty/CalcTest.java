@@ -10,12 +10,12 @@ public class CalcTest {
     @Test
     public void testDiv() {
         mcalc = new Calc();
-        assertEquals(2, mcalc.div(2, 1), 0);
+        assertEquals(2, mcalc.div(2, 1));
     }
 
     @Test
     public void testPlus() {
         mcalc = new Calc();
-        assertEquals(3, mcalc.plus(1, 2), 0);
+        assertEquals(3, mcalc.plus(1, 2));
     }
 }
