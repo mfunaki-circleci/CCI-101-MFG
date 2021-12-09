@@ -123,8 +123,8 @@
         <configuration>
           <configuration>google_checks.xml</configuration>
           <encoding>UTF-8</encoding>
-          <consoleOutput>true</consoleOutput>
-          <failsOnError>true</failsOnError>
+          <consoleOutput>false</consoleOutput>
+          <failsOnError>false</failsOnError>
         </configuration>
         <reportSets>
           <reportSet>
