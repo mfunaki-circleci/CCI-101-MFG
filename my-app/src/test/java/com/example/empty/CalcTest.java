@@ -16,6 +16,6 @@ public class CalcTest {
     @Test
     public void testPlus() {
         mcalc = new Calc();
-        assertEquals(3, mcalc.plus(1, 2));
+        assertEquals(4, mcalc.plus(1, 2));
     }
 }
