@@ -11,11 +11,12 @@ public class CalcTest {
     public void testDiv() {
         mcalc = new Calc();
         assertEquals(2, mcalc.div(2, 1));
+        assertEquals(0, mcalc.div(0, 1));
     }
 
     @Test
     public void testPlus() {
         mcalc = new Calc();
-        assertEquals(4, mcalc.plus(1, 2));
+        assertEquals(3, mcalc.plus(1, 2));
     }
 }
